@@ -34,7 +34,6 @@ const InfoCard = () => {
     try {
         const response = await axios.get(`${uri}/admin-data`);
         const data=response.data.data
-        console.log(response)
         setAdminData({
           title: data.title || "",
           phone_no: data.phone_no || "",
