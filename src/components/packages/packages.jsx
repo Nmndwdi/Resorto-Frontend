@@ -10,6 +10,20 @@ function packages() {
 
     const [loading,setLoading]=useState(false)
 
+    const isValidUrl = (url) => {
+      // Simple URL validation using a regular expression
+      const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+
+      if (urlPattern.test(url)) {
+      // window.location.href = url
+      // Valid URL, you can proceed with further actions
+          return true; // Redirect to the entered URL
+      } else {
+      // setValidationMessage('Please enter a valid URL.');
+          return false;
+      }
+    };
+
     useEffect(() => {
         setLoading(true)
         const fetchPackageData = async () => {
@@ -46,7 +60,20 @@ function packages() {
                     <h3 className="text-2xl font-bold italic  text-gray-700">
                       {item.subheading}
                     </h3>
-                    <p className="text-lg text-gray-700">{item.description}</p>
+                    <p className="text-lg text-gray-700">
+                      {isValidUrl(item.description) ? (
+                        <a
+                          href={item.description}
+                          className="text-blue-500 underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.description}
+                        </a>
+                      ) : (
+                        item.description
+                      )}
+                    </p>
                   </div>
                 ))}
               </div>
