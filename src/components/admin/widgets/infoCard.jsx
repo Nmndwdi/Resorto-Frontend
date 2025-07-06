@@ -103,7 +103,7 @@ const InfoCard = () => {
             {Object.entries(adminData).map(([key, value]) => (
               <div key={key}>
                 <span className="font-semibold capitalize">{key.replace(/_/g, ' ')}:</span>{' '}
-                <span className="whitespace-pre text-gray-700">{value}</span>
+                <span className="whitespace-pre-wrap text-gray-700">{value}</span>
               </div>
             ))}
           </div>
