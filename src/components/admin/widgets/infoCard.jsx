@@ -122,6 +122,15 @@ const InfoCard = () => {
             {Object.entries(adminData).map(([key, value]) => (
               <div key={key} className="flex flex-col">
                 <label className="capitalize text-gray-600 font-medium mb-1">{key.replace(/_/g, ' ')}:</label>
+                {['address', 'short_about_description', 'about_description', 'description'].some(part => key.toLowerCase().includes(part)) ? (
+                <textarea
+                  name={key}
+                  value={adminData[key]}
+                  onChange={handleChange}
+                  rows={4}
+                  className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 resize-y"
+                />
+              ) : (
                 <input
                   type="text"
                   name={key}
@@ -129,6 +138,7 @@ const InfoCard = () => {
                   onChange={handleChange}
                   className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
                 />
+              )}
               </div>
             ))}
           </form>
