@@ -113,7 +113,7 @@ function header() {
 
                         <div className="flex items-center space-x-2">
                             <i className="fas fa-location-dot"></i>
-                            <span className=''>{headerData.address}</span>
+                            <span className='whitespace-pre-wrap'>{headerData.address}</span>
                         </div>
                     </div>
                     <div className="bg-gray-100 rounded-lg shadow-md sm:mt-3 mr-2 ml-2 sm:ml-0 flex-1">

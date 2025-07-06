@@ -36,7 +36,7 @@ function About() {
       <div className="flex flex-col ml-4 mr-4 sm:ml-8 sm:mr-8">
         <div className="mt-10 p-3 rounded-lg bg-gradient-to-br from-gray-0 to-gray-200 mb-10">
           <h2 className="font-semibold text-3xl mb-10 italic">{aboutData.about_heading}</h2>
-          <p className="text-gray-700 font-mono text-lg">{aboutData.about_description}</p>
+          <p className="whitespace-pre-wrap text-gray-700 font-mono text-lg">{aboutData.about_description}</p>
         </div>
       </div></>)}
     </>

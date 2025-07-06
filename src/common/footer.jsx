@@ -96,7 +96,7 @@ function footer() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>{footerData.address}</span>
+                  <span className='whitespace-pre-wrap'>{footerData.address}</span>
                 </li>
               </ul>
             </div>

@@ -80,7 +80,7 @@ function Home() {
       <div className="flex flex-col ml-4 mr-4">
         <div className={`m-2 p-3 border rounded-lg`}>
           <h2 className="font-semibold text-3xl mb-3 italic">{homeData.short_about_heading}</h2>
-          <p className="text-gray-700 font-mono text-lg">{homeData.short_about_description}</p>
+          <p className="whitespace-pre-wrap text-gray-700 font-mono text-lg">{homeData.short_about_description}</p>
         </div>
       </div>
       
